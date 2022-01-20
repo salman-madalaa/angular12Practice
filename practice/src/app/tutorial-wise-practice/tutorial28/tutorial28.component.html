@@ -1,0 +1,53 @@
+<jqxSplitter #mainSplitter width="99.8%" height="99.5%" [panels]="[{ size: 300 }]">
+
+  <!-- ----------------------- This is Left Side panel----------------- -->
+  <div class="splitter-panel">
+    <div class="title">
+      <h1 style="font-size:30px;color:rgb(60, 64, 65)"><b> Reusuable Component </b></h1>
+    </div>
+
+    <li> Make child component </li>
+    <li> Use child component in For Loop </li>
+    <li> Send data from parent component </li>
+    <li> Use Data in child component</li>
+    <li> Apply CSS in Child Component</li>
+    <li> Interview Questations </li>
+    <br>
+    <br>
+    <li><a href="https://www.youtube.com/watch?v=IiZu-Eg3qRM&list=PL8p2I9GklV47eNpoo4Fr6fkags72a8F0v&index=29">Video
+        Link</a></li>
+
+  </div>
+
+  <!-- ----------------------- This is Right Side panel----------------- -->
+  <div class="splitter-panel">
+    <h1 style="text-align:center"> <u> {{'Reusuable Component' | titlecase}} </u></h1> <br>
+
+    <h3><u><b>Make child component</b></u>: <br>
+      For to create child component we have to run the command <b> ng g c user-details </b>
+    </h3>
+    <hr>
+    <h3><u><b> Use child component in For Loop </b></u>: <br>
+      Now I will create user details array inside the parent component.ts file <br>
+      Next I will create a span tag for to write  " For Loop " . <br>
+      Next I will use user-details selector inside the "For Loop " for to send each record to child(user-details) component .<br>
+      So that we can use the child component inside the For Loop .
+    </h3>
+
+    <span *ngFor="let userDetail of userDetails">
+      <app-user-details [item]="userDetail" ></app-user-details>
+    </span>
+
+
+    <hr>
+    <h3><u><b>Interview Questations</b></u>: <br>
+      1) from parent component can we call multiple components and send the data ?  <br>
+      A) yes  <br>
+      2) Can we send two values in one component selector ?  <br>
+      A) Yes  <br>
+      3) can we make nested child component ?  <br>
+      A) yes  <br>
+    </h3>
+
+  </div>
+</jqxSplitter>
